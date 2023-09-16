@@ -18,4 +18,16 @@ In the first **method** we introduce ***public enum*** which is a list of predef
 - The integer value begins at zero and ends at three in this program.  With enumeration, by default, the first predefined constant begins with zero and then counts forward until the predefined constants end.
     - FirstCommaLast is set at zero
     - LastFirst is set at three
-test
+### Main Method Code ####
+```cs
+static void Main(string[] args)
+{
+    string firstName = GetFirstName();
+    string lastName = GetLastName();
+    NameFormat userDefinedNameFormat = GetNameFormat();
+    string fullName = CombineFirstAndLastName(firstName, lastName, userDefinedNameFormat);
+
+    OutputFormattedFullName(fullName);
+}
+```
+The 
