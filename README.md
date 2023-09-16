@@ -110,4 +110,4 @@ public static string CombineFirstAndLastName(string firstName, string lastName, 
     }
 }
 ```
-[ENTER TXT HERE]
+[ENTER TEXT HERE]
