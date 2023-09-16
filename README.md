@@ -30,7 +30,9 @@ static void Main(string[] args)
     OutputFormattedFullName(fullName);
 }
 ```
-[ENTER TEXT HERE]
+This is the entry point within a C# console application, it serves as the starting point for the program's execution
+- *static* is used to mark the **Main** method as *static* as it does not belong to an instance of a class, but belongs to the class itself
+    - This allows the ability to call the **Main** method without creating an object of the class that contains it.
 
 ### GetFirstName Code ###
 ```cs
