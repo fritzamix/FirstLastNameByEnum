@@ -1,2 +1,2 @@
 # FirstLastNameByEnum
-Obtain first and last name and output would be user defined by using enumeration
+This program obtains a users *first* and *last* name and then requests how the user would like to see their name displayed.  After the users entry, the program produces the desired outcome by using enumeration.
