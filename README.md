@@ -30,4 +30,84 @@ static void Main(string[] args)
     OutputFormattedFullName(fullName);
 }
 ```
-The 
+[ENTER TEXT HERE]
+
+### GetFirstName Code ###
+```cs
+ public static string GetFirstName()
+ {
+     Console.Write("What is your first name?: ");
+     return Console.ReadLine();
+ }
+```
+[ENTER TEXT HERE]
+
+### GetLastName Code ###
+```cs
+public static string GetLastName()
+{
+    Console.Write("What is your last name?: ");
+    return Console.ReadLine();
+}
+```
+[ENTER TEXT HERE]
+
+### GetNameFormat Code ###
+```cs
+public static NameFormat GetNameFormat()
+{
+    Console.WriteLine();
+
+    string[] names = Enum.GetNames(typeof(NameFormat));
+
+    for (int i = 0; i < names.Length; i++)
+    {
+        Console.WriteLine(i + 1 + ": " + names[i]);
+    }
+
+    Console.Write("Please select a name format from the list above: ");
+    string userSelection = Console.ReadLine();
+    Console.WriteLine();
+
+    bool result = int.TryParse(userSelection, out int intUserSelection);
+
+    if (result == true && intUserSelection >= 1 && intUserSelection <= names.Length)
+    {
+        return (NameFormat)(intUserSelection - 1);
+    }
+    else
+    {
+        return NameFormat.LastCommaFirst;
+    }
+}
+```
+[ENTER TEXT HERE]
+
+### CombineFirstAndLastName Code ###
+```cs
+public static string CombineFirstAndLastName(string firstName, string lastName, NameFormat nameFormat)
+{
+    string fullName = "";
+
+    if (nameFormat == NameFormat.FirstCommaLast) fullName = firstName + ", " + lastName;
+    if (nameFormat == NameFormat.LastCommaFirst) fullName = lastName + ", " + firstName;
+    if (nameFormat == NameFormat.FirstLast) fullName = firstName + " " + lastName;
+    if (nameFormat == NameFormat.LastFirst) fullName = lastName + " " + firstName;
+
+    return fullName;
+}
+```
+[ENTER TEXT HERE]
+
+### OutputFormattedFullName ###
+```cs
+        public static void OutputFormattedFullName(string fullName)
+        {
+            Console.WriteLine("");
+
+            Console.WriteLine("Your full name is: " + fullName);
+        }
+    }
+}
+```
+[ENTER TXT HERE]
