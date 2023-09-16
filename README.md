@@ -13,3 +13,9 @@ public enum NameFormat`
     LastFirst
 }
 ```
+In the first **method** we introduce ***public enum*** which is a list of predefined constants defined by integer values.
+- The predefined constants are the variations the *first* and *last* name are to be displayed
+- The integer value begins at zero and ends at three in this program.  With enumeration, by default, the first predefined constant begins with zero and then counts forward until the predefined constants end.
+    - FirstCommaLast is set at zero
+    - LastFirst is set at three
+test
