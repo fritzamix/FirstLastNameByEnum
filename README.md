@@ -36,6 +36,11 @@ This is the entry point within a C# console application, it serves as the starti
 - *void* allows the method to perform its tasks and does not provide a result.
 - *Main* is the name of the method, it is consistently used as the entry point in a C# application.
     - The **capitalization** and **spelling** must match exactly; *Main*
+- *(string[] args)* is the method's parameter list, taking an array of strings called **args** as a parameter.
+    - The **args** allow to pass command-line arguements as the application runs.
+        - Command-line arguments can:
+            - Provide Input
+            - Configuration to the program
 ### GetFirstName Code ###
 ```cs
  public static string GetFirstName()
