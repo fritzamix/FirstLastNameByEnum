@@ -30,10 +30,12 @@ static void Main(string[] args)
     OutputFormattedFullName(fullName);
 }
 ```
-This is the entry point within a C# console application, it serves as the starting point for the program's execution
-- *static* is used to mark the **Main** method as *static* as it does not belong to an instance of a class, but belongs to the class itself
+This is the entry point within a C# console application, it serves as the starting point for the program's execution.
+- *static* is used to mark the **Main** method as *static* as it does not belong to an instance of a class, but belongs to the class itself.
     - This allows the ability to call the **Main** method without creating an object of the class that contains it.
-
+- *void* allows the method to perform its tasks and does not provide a result.
+- *Main* is the name of the method, it is consistently used as the entry point in a C# application.
+    - The **capitalization** and **spelling** must match exactly; *Main*
 ### GetFirstName Code ###
 ```cs
  public static string GetFirstName()
