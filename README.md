@@ -48,6 +48,17 @@ This is the entry point within a C# console application, it serves as the starti
 - The "=" is used to assign a value to the variable on the left side of the "="; the assignment operator.
 - The **GetFirstName()** is a method call, which can be called to return the value type *string*.
 - The **GetLastName()** is also a method call, which can be called to return its own value type *string*.
+- **NameFormat** is the data type of the variable being declared.
+- **userDefinedNameFormat** is the name of the variable being declared.
+    - This is an identifier that can be used to refer to a value stored in the variable.
+- The "=" is used to assign a value to the variable on the left side of the "="; the assignment operator.
+- **GetNameFormat()** is also a method call, this method returns a value of the **NameFormat** enumeration type.
+- The **string fullName** states that **fullName** is the data type variable where it will store a sequence of characters.
+    - **fullName** is the name of the variable being declared, it is the name sued to identify the value stored.
+- The "=" is used to assign a value to the variable on the left side of the "="; the assignment operator.
+- **CombineFirstAndLastName ...** is a method call
+    - Invoking a method named **CombineFirstAndLastName**
+    - Passing three arguements to it, **firstName**, **lastName**, and **userDefinedNameFormat**
 ### GetFirstName Code ###
 ```cs
  public static string GetFirstName()
