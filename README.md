@@ -56,9 +56,15 @@ This is the entry point within a C# console application, it serves as the starti
 - The **string fullName** states that **fullName** is the data type variable where it will store a sequence of characters.
     - **fullName** is the name of the variable being declared, it is the name sued to identify the value stored.
 - The "=" is used to assign a value to the variable on the left side of the "="; the assignment operator.
-- **CombineFirstAndLastName ...** is a method call
+- **CombineFirstAndLastName ...** is a method call, essentially combining the **firstName** and **lastName** while applying a specified format found in **userDefinedNameFormat**.
     - Invoking a method named **CombineFirstAndLastName**
     - Passing three arguements to it, **firstName**, **lastName**, and **userDefinedNameFormat**
+        - **firstName** is a variable representing the last name
+        - **lastName** is a variable representing the last name
+        - **userDefinedNameFormat** is a variable representing a user-defined format via enumeration
+- **OutputFormattedFullName()** is a method call that in this instance, takes a string arguement.
+    - That string arguement is **fullName**
+    - This method, when called, displays the formatted full name
 ### GetFirstName Code ###
 ```cs
  public static string GetFirstName()
