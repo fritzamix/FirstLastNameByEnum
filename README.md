@@ -78,7 +78,7 @@ The **GetFirstName** method obtains and returns the user's first name.
     - **public** method means it can be accessed from outside the class where it is defined
     - **static** method means it can be called without creating an instance of the class, returning a *string*
 - **Console.Write(What is your first name?: ");** writes *What is your first name?* on the console, prompting the user to enter their first name.
-- **return Console.ReadLine();** reads what the user enters and returns it as a string
+- **return Console.ReadLine();** reads what the user enters and returns it as a *string* type
     - in short, capturing the enty of the user and stores it as a value and use as needed within the program
 
 ### GetLastName Code ###
@@ -90,11 +90,11 @@ public static string GetLastName()
 }
 ```
 The **GetLastName** method obtains and returns the user's last name.
-- **public static string GetLastName()** is a method declararion
+- **public static string GetLastName()** is a method declararion.
     - **public** method means it can be accessed from outside the class where it is defined
     - **static** method means it can be called without creating an instance of the class, returning a *string*
 - **Console.Write(What is your last name?: ");** writes *What is your last name?* on the console, prompting the user to enter their last name.
-- **return Console.ReadLine();** reads what the user enters and returns it as a string
+- **return Console.ReadLine();** reads what the user enters and returns it as a *string* type
     - in short, capturing the enty of the user and stores it as a value and use as needed within the program
 
 ### GetNameFormat Code ###
@@ -126,9 +126,15 @@ public static NameFormat GetNameFormat()
     }
 }
 ```
-The **GetNameFormat** method allows a user to select a name format from a list of options and returns the chosen format as an enum value of **NameFormat**.
-    If a user provides an invalid input, the default format is **NameFormat.LastCommaFirst**
-
+The **GetNameFormat** method allows a user to select a name format from a list of options and returns the chosen format as an enum value of **NameFormat**.  If a user provides an invalid input, the default format is **NameFormat.LastCommaFirst**.
+- **public static string GetLastName()** is a method declararion.
+    - **public** method means it can be accessed from outside the class where it is defined
+    - **static** method means it can be called without creating an instance of the class, returning a *enumeration* type
+- **Console.WriteLine();** creates a blank line to the console, providing visual separation form lines of text on the console
+- **string[] names = Enum.GetNames(typeof(NameFormat));** retrieves the names of the values in the **NameFormat** enumeration and stores the array call **names**
+- **for (int i = 0; i < names.Length; i++) is a *for* loop that repeatedly numbers each format until the list ends
+    - Note: **i++** is shorthand in *C#* to increment the value of a variable by 1.  This is called a *post increment* operator
+        - Outside of the project, a *pre-increment* operator, for example, would be **++i**
 ### CombineFirstAndLastName Code ###
 ```cs
 public static string CombineFirstAndLastName(string firstName, string lastName, NameFormat nameFormat)
