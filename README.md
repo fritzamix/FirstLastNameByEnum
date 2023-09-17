@@ -31,7 +31,7 @@ static void Main(string[] args)
 }
 ```
 This is the entry point within a C# console application, it serves as the starting point for the program's execution.
-- *static* is used to mark the **Main** method as *static* as it does not belong to an instance of a class, but belongs to the class itself.
+- *static* is used to mark the **Main** method as *static* as it does not belong to an instance of the class, but belongs to the class itself.
     - This allows the ability to call the **Main** method without creating an object of the class that contains it.
 - *void* allows the method to perform its tasks and does not provide a result.
 - *Main* is the name of the method, it is consistently used as the entry point in a C# application.
@@ -147,7 +147,7 @@ The **GetNameFormat** method allows a user to select a name format from a list o
           - Note: **(intUserSelection - 1)** is used to account for that fact arrays are zero-based, while the user's selection is one-based
               - For example, array is 0 = user's selection is 1, array is 1 = user's selection is 2, etc...
     - If the criteria above is false, it will default to the format **LastCommaFirst**
-        - The criteria would be false if the user's input is not valied (either not a number or within the valid range)
+        - The criteria is false if the user's input is not valid (either not a number or within the valid range)
 ### CombineFirstAndLastName Code ###
 ```cs
 public static string CombineFirstAndLastName(string firstName, string lastName, NameFormat nameFormat)
@@ -162,8 +162,20 @@ public static string CombineFirstAndLastName(string firstName, string lastName, 
     return fullName;
 }
 ```
-[ENTER TEXT HERE]
-
+The **CombineFirstAndLastName** method allows you to easily format the full name based on different naming conventions specified by the **nameFormat** parameter.
+- **string CombineFirstAndLastName(string firstName, string lastName, NameFormat nameFormat)** is the method declaration
+    - The *string* **CombineFirstAndLastName** returns a *string* value with the three parameters:
+        - firstName (a *string* representing the first name)
+        - lastName (a *string* representing the last name)
+        - nameFormat (an *enumeration* representing the desired format)
+- **string fullName = "";** initializes an empty string named **fullName** to later hold the combined full name
+- The four *if* statements determines the **nameFormat** and then constructs the **fullName**
+    - if (nameFormat == NameFormat.FirstCommaLast) fullName = firstName + ", " + lastName;
+        - *First, Last*
+        - *Last, First*
+        - *First Last*
+        - *Last First*
+- **fullName** is returned as the output of the method
 ### OutputFormattedFullName ###
 ```cs
         public static void OutputFormattedFullName(string fullName)
@@ -175,7 +187,14 @@ public static string CombineFirstAndLastName(string firstName, string lastName, 
     }
 }
 ```
-[ENTER TEXT HERE]
+The **OutputFormattedFullName** is a utility method to display a formatted full name in the console.
+- **public static void OutputFormattedFullName(string fullName)**
+    - *public* 
+    - *static* is used to mark the method as *static*, meaning it can be called without creating an instance of the class
+- *void* allows the method to perform its tasks and does not provide a result.
+- **Console.WriteLine("");** creates a blank line to the console, providing visual separation form lines of text on the console.
+- **Console.WriteLine("Your full name is: " = fullName);** displays a message on the console including the **fullName** parameter that was passed to the method.
+    - Final ouput to the console would be "Your full name is: (displaying the format desired of the first and last name)
 ## Complete Code ##
 ```cs
 namespace FirstLastNameByEnum
