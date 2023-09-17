@@ -41,6 +41,13 @@ This is the entry point within a C# console application, it serves as the starti
         - Command-line arguments can:
             - Provide Input
             - Configuration to the program
+- The **string firstName** states that **firstName** is the data type variable where it will store a sequence of characters.
+    - **firstName** is the name of the variable being declared, it is the name used to identify the value stored.
+- The **string lastName** also states that **lastName** is the data type variable where it will also store a sequence of characters.
+    - **lastName** is also the name of the variable being declared, it is the name used to identify the value stored.
+- The "=" is used to assign a value to the variable on the left side of the "="; the assignment operator.
+- The **GetFirstName()** is a method call, which can be called to return the value type *string*.
+- The **GetLastName()** is also a method call, which can be called to return its own value type *string*.
 ### GetFirstName Code ###
 ```cs
  public static string GetFirstName()
