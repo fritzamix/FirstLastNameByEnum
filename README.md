@@ -76,7 +76,7 @@ This is the entry point within a C# console application, it serves as the starti
 The **GetFirstName** method obtains and returns the user's first name.
 - **public static string GetFirstName()** is a method declararion
     - **public** method means it can be accessed from outside the class where it is defined
-    - **static** method means it can be called without creating an instance of the class, returning a *string*
+    - **static** method means it can be called without creating an instance of the class, returning a *string* type (in this instance)
 - **Console.Write(What is your first name?: ");** writes *What is your first name?* on the console, prompting the user to enter their first name.
 - **return Console.ReadLine();** reads what the user enters and returns it as a *string* type
     - in short, capturing the enty of the user and stores it as a value and use as needed within the program
@@ -92,9 +92,9 @@ public static string GetLastName()
 The **GetLastName** method obtains and returns the user's last name.
 - **public static string GetLastName()** is a method declararion.
     - **public** method means it can be accessed from outside the class where it is defined
-    - **static** method means it can be called without creating an instance of the class, returning a *string*
+    - **static** method means it can be called without creating an instance of the class, returning a *string* type (in this instance)
 - **Console.Write(What is your last name?: ");** writes *What is your last name?* on the console, prompting the user to enter their last name.
-- **return Console.ReadLine();** reads what the user enters and returns it as a *string* type
+- **return Console.ReadLine();** reads what the user enters and returns it as a *string* type 
     - in short, capturing the enty of the user and stores it as a value and use as needed within the program
 
 ### GetNameFormat Code ###
@@ -129,12 +129,25 @@ public static NameFormat GetNameFormat()
 The **GetNameFormat** method allows a user to select a name format from a list of options and returns the chosen format as an enum value of **NameFormat**.  If a user provides an invalid input, the default format is **NameFormat.LastCommaFirst**.
 - **public static string GetLastName()** is a method declararion.
     - **public** method means it can be accessed from outside the class where it is defined
-    - **static** method means it can be called without creating an instance of the class, returning a *enumeration* type
+    - **static** method means it can be called without creating an instance of the class, returning a *enumeration* type (in this instance)
 - **Console.WriteLine();** creates a blank line to the console, providing visual separation form lines of text on the console
 - **string[] names = Enum.GetNames(typeof(NameFormat));** retrieves the names of the values in the **NameFormat** enumeration and stores the array call **names**
 - **for (int i = 0; i < names.Length; i++) is a *for* loop that repeatedly numbers each format until the list ends
-    - Note: **i++** is shorthand in *C#* to increment the value of a variable by 1.  This is called a *post increment* operator
-        - Outside of the project, a *pre-increment* operator, for example, would be **++i**
+    - **int** specifies the data type of the variable as an *integer*
+    - "**i**" is the name of the variable
+    - The "=" is used to assign a value to the variable on the left side of the "="; the assignment operator.
+    - "**0**" is the value being assigned to the variable "**i**"
+        - Note: **i++** is shorthand in *C#* to increment the value of a variable by 1.  This is called a *post increment* operator
+            - Outside of the project, a *pre-increment* operator, for example, would be **++i**, if you want to increment the variable before using its current value
+- **Console.Write("Please select a name format from the list above: ");** is displayed on the consold to prompt the user to select a *name format*.
+- **string userSelection = Console.ReadLine();** reads what the user enters and returns it as a *string* type in the **userSelection** variable
+- **bool result = int.TryParse(userSelection, out int intUserSelection);**  attempts to parse the **userSelection** string into an integer and stores the resluts in the **intUsersSelection** variable
+    - If the parsing is successful as well as the user entering a format that falls within the valid range of name formats in **result**, it is set to **true**.
+        - If **result** is set to **true**, it will return the selected name format by converting the integer back to the corresponding **NameFormat** enum value.
+          - Note: **(intUserSelection - 1)** is used to account for that fact arrays are zero-based, while the user's selection is one-based
+              - For example, array is 0 = user's selection is 1, array is 1 = user's selection is 2, etc...
+    - If the criteria above is false, it will default to the format **LastCommaFirst**
+        - The criteria would be false if the user's input is not valied (either not a number or within the valid range)
 ### CombineFirstAndLastName Code ###
 ```cs
 public static string CombineFirstAndLastName(string firstName, string lastName, NameFormat nameFormat)
