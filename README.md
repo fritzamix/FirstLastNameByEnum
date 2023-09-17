@@ -126,7 +126,9 @@ public static NameFormat GetNameFormat()
     }
 }
 ```
-[ENTER TEXT HERE]
+The **GetNameFormat** method allows a user to select a name format from a list of options and returns the chosen format as an enum value of **NameFormat**.
+
+If a user provides an invalid input, the default format is **NameFormat.LastCommaFirst**
 
 ### CombineFirstAndLastName Code ###
 ```cs
