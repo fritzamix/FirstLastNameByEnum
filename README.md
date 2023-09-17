@@ -73,7 +73,13 @@ This is the entry point within a C# console application, it serves as the starti
      return Console.ReadLine();
  }
 ```
-[ENTER TEXT HERE]
+The **GetFirstName** method obtains and returns the user's first name.
+- **public static string GetFirstName()** is a method declararion
+    - **public** method means it can be accessed from outside the class where it is defined
+    - **static** method means it can be called without creating an instance of the class, returning a *string*
+- **Console.Write(What is your first name?: ");** writes *What is your first name?* on the console, prompting the user to enter their first name.
+- **return Console.ReadLine();** reads what the user enters and returns it as a string
+    - in short, capturing the enty of the user and stores it as a value and use as needed within the program
 
 ### GetLastName Code ###
 ```cs
@@ -83,7 +89,13 @@ public static string GetLastName()
     return Console.ReadLine();
 }
 ```
-[ENTER TEXT HERE]
+The **GetLastName** method obtains and returns the user's last name.
+- **public static string GetLastName()** is a method declararion
+    - **public** method means it can be accessed from outside the class where it is defined
+    - **static** method means it can be called without creating an instance of the class, returning a *string*
+- **Console.Write(What is your last name?: ");** writes *What is your last name?* on the console, prompting the user to enter their last name.
+- **return Console.ReadLine();** reads what the user enters and returns it as a string
+    - in short, capturing the enty of the user and stores it as a value and use as needed within the program
 
 ### GetNameFormat Code ###
 ```cs
